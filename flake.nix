@@ -12,6 +12,8 @@
         system.x86_64-darwin = "darwin_amd64";
         system.aarch64-darwin = "darwin_arm64";
       };
+      # SHA hashes are downloadable from links like
+      # https://releases.hashicorp.com/terraform/1.3.9/terraform_1.3.9_SHA256SUMS
       download_hashes = with flake-utils.lib; {
         "1.3.7" = {
           system.x86_64-linux =
@@ -22,6 +24,26 @@
             "sha256:aa111cd80d84586697d1643c6c21452d34f70e5bc639e4106856f59382351397";
           system.aarch64-darwin =
             "sha256:8860db524d1a51435cbed731902c7de1595348c09dd5b3a342024405c8e7ef74";
+        };
+        "1.3.8" = {
+          system.x86_64-linux =
+            "sha256:9d9e7d6a9b41cef8b837af688441d4fbbd84b503d24061d078ad662441c70240";
+          system.aarch64-linux =
+            "sha256:a42bf3c7d6327f45d2b212b692ab4229285fb44dbb8adb7c39e18be2b26167c8";
+          system.x86_64-darwin =
+            "sha256:3cb29f95962947b0dbdf3f83338121879426d723ba60007e7c264c3c8a2add8f";
+          system.aarch64-darwin =
+            "sha256:4547a47be08350a3eb6e44fd28e957cf515c3a2b52e04f134366a08b1fbf03ec";
+        };
+        "1.3.9" = {
+          system.x86_64-linux =
+            "sha256:53048fa573effdd8f2a59b726234c6f450491fe0ded6931e9f4c6e3df6eece56";
+          system.aarch64-linux =
+            "sha256:da571087268c5faf884912c4239c6b9c8e1ed8e8401ab1dcb45712df70f42f1b";
+          system.x86_64-darwin =
+            "sha256:ca78815afd657f887de7f9b74014dc4bddffe80fd28028179b271a3c4f64f29a";
+          system.aarch64-darwin =
+            "sha256:9df6fc8a9264bba1058e6e9383f43af2ee816088e61925e5bc45128ad8b6e9ad";
         };
       };
     in with flake-utils.lib;
@@ -57,8 +79,10 @@
       in {
         packages = rec {
           default = terraform_1_3;
-          terraform_1_3 = terraform_1_3_7;
+          terraform_1_3 = terraform_1_3_9;
           terraform_1_3_7 = build_package "1.3.7";
+          terraform_1_3_8 = build_package "1.3.8";
+          terraform_1_3_9 = build_package "1.3.9";
         };
 
         formatter = pkgs.nixfmt;
