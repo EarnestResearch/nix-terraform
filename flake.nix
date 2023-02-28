@@ -21,9 +21,9 @@
           system.aarch64-linux =
             "sha256:5b491c555ea8a62dda551675fd9f27d369f5cdbe87608d2a7367d3da2d38ea38";
           system.x86_64-darwin =
-            "sha256:aa111cd80d84586697d1643c6c21452d34f70e5bc639e4106856f59382351397";
+            "sha256:b00465acc7bdef57ba468b84b9162786e472dc97ad036a9e3526dde510563e2d";
           system.aarch64-darwin =
-            "sha256:8860db524d1a51435cbed731902c7de1595348c09dd5b3a342024405c8e7ef74";
+            "sha256:6cda396999c9a27cb90c4902913c10ac0afe1bfceb957ed50a4298c5872979cf";
         };
         "1.3.8" = {
           system.x86_64-linux =
