@@ -93,6 +93,7 @@
           terraform_1_3_7 = build_package "1.3.7";
           terraform_1_3_8 = build_package "1.3.8";
           terraform_1_3_9 = build_package "1.3.9";
+          terraform_1_4_4 = build_package "1.4.4";
         };
 
         formatter = pkgs.nixfmt;
