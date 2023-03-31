@@ -13,7 +13,7 @@
         system.aarch64-darwin = "darwin_arm64";
       };
       # SHA hashes are downloadable from links like
-      # https://releases.hashicorp.com/terraform/1.3.9/terraform_1.3.9_SHA256SUMS
+      # https://releases.hashicorp.com/terraform/1.4.4/terraform_1.4.4_SHA256SUMS
       download_hashes = with flake-utils.lib; {
         "1.3.7" = {
           system.x86_64-linux =
@@ -44,6 +44,16 @@
             "sha256:ca78815afd657f887de7f9b74014dc4bddffe80fd28028179b271a3c4f64f29a";
           system.aarch64-darwin =
             "sha256:9df6fc8a9264bba1058e6e9383f43af2ee816088e61925e5bc45128ad8b6e9ad";
+        };
+        "1.4.4" = {
+          system.x86_64-linux =
+            "sha256:67541c1f6631befcc25b764028e5605e59234d4424e60a256518ee1e8dd50593";
+          system.aarch64-linux =
+            "sha256:f0b4e092f2aa6de3324e5e4b5b51260ecf5e8c2f5335ff7a2ffdc4fb54a8922d";
+          system.x86_64-darwin =
+            "sha256:0303ed9d7e5a225fc2e6fa9bf76fc6574c0c0359f22d5dfc04bc8b3234444f7c";
+          system.aarch64-darwin =
+            "sha256:75602d9ec491982ceabea813569579b2991093a4e0d76b7ca86ffd9b7a2a1d1e";
         };
       };
     in with flake-utils.lib;
