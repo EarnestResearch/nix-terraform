@@ -65,6 +65,16 @@
           system.aarch64-darwin =
             "sha256:0765371227ab09e1bb64d606fcfe3d157a2992ac3b82ffabfb9976db53bd791e";
         };
+        "1.5.1" = {
+          system.x86_64-linux =
+            "sha256:31754361a9b16564454104bfae8dd40fc6b0c754401c51c58a1023b5e193aa29";
+          system.aarch64-linux =
+            "sha256:7799fc8f167fa4071024b11cb2fc186fdab18d9bede761d3f1cdffad7ab19df0";
+          system.x86_64-darwin =
+            "sha256:4f9f518b40399a9271dd8e449a6335ec94a4de60fc8789711ede7a4b9e630a47";
+          system.aarch64-darwin =
+            "sha256:f691b79319bd82daac2d8b6cbb595d3e8523296c4cd20bf7da0d12fe9eefdfa7";
+        };
       };
     in with flake-utils.lib;
     eachDefaultSystem (system:
@@ -104,8 +114,9 @@
           terraform_1_3_8 = build_package "1.3.8";
           terraform_1_3_9 = build_package "1.3.9";
           terraform_1_4_4 = build_package "1.4.4";
-          terraform_1_5 = terraform_1_5_0;
+          terraform_1_5 = terraform_1_5_1;
           terraform_1_5_0 = build_package "1.5.0";
+          terraform_1_5_1 = build_package "1.5.1";
         };
 
         formatter = pkgs.nixfmt;
